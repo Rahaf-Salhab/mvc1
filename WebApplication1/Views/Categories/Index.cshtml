@@ -1,0 +1,17 @@
+﻿
+<!Doctype html>
+<html>
+<head>
+
+</head>
+<body>
+    <h1>All Categories</h1>
+    <ul>
+        @foreach (var category in @Model)
+        {
+            /*لعمل رابط عند الضغط عليه يتم الانتقال الى تفاصيل كل category*/
+            <li>category is @category.Name <a href="/categories/details/@category.Id">Details</a></li>
+        }
+    </ul>
+</body>
+</html>
