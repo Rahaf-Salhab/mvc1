@@ -1,0 +1,18 @@
+﻿@model Category
+
+<form method="post" action="/categories/store">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" id="cName" placeholder="Enter Category Name..">
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <input asp-for="Description" class="form-control" id="cDesc" placeholder="Enter Category Description..">
+        <span class="text-danger" asp-validation-for="Description"></span>
+    </div>
+
+    <button type="submit" class="btn btn-outline-primary">Create</button>
+</form>
+

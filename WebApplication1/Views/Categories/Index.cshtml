@@ -6,11 +6,22 @@
 </head>
 <body>
     <h1>All Categories</h1>
+    <!--للوصول الى صفحة create-->
+     <a href="/categories/create">Create</a>
     <ul>
         @foreach (var category in @Model)
         {
-            /*لعمل رابط عند الضغط عليه يتم الانتقال الى تفاصيل كل category*/
-            <li>category is @category.Name <a href="/categories/details/@category.Id">Details</a></li>
+             /*لعمل رابط عند الضغط عليه يتم الانتقال الى تفاصيل كل category*/
+            <li>category is @category.Name
+                <a href="/categories/details/@category.Id" class="btn btn-outline-info">Details</a>
+                <!--لتشغيل والانتقال الى delete-->
+                <a href="/categories/delete/@category.Id" class="btn btn-outline-danger">Delete</a>
+           
+               <a href="/categories/edit/@category.Id" class="btn btn-outline-success">Edit</a>
+             
+
+             </li>
+
         }
     </ul>
 </body>
